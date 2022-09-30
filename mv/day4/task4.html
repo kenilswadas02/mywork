@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ASCII value sort</title>
+</head>
+
+<body>
+    <input type="text" id="str">
+    <input type="button" value="Submit" onclick="ascii_value()">
+    <label id="show"></label>
+</body>
+<script>
+    function ascii_value() {
+        var str = document.getElementById("str").value;
+        st = str.split("")
+        console.log(st)
+        for (var i = 0; i < str.length; i++) {
+            // console.log(str.charCodeAt(i));
+            if(str.charCodeAt(i) % 2 == 0){
+                // console.log(str.charCodeAt(i))
+                console.log(st[i].toLowerCase())
+                document.write(st[i].toLowerCase())
+            }
+            else{
+                console.log(st[i].toUpperCase())
+                document.write(st[i].toUpperCase())
+            }
+            
+        }
+
+    }
+
+</script>
+
+</html>

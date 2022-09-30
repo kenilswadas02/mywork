@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <style>
+      #vdiv{
+        opacity: 0.9;
+        background-color: beige;
+        margin: 5%;
+      }
+        #dd1{
+            width: 100%;
+            height: auto;
+            background-color: antiquewhite;
+        }
+        #ddd1{
+            width: 100%;
+            height: auto;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+        #ddd2{
+            width: 100%;
+            height: auto;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+
+
+
+        body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: rgb(0, 44, 95);
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+/* hover on images */
+img:hover{
+  opacity: 0.5;
+}
+li:hover{
+  
+  opacity: 0.5;
+}
+#nav_div{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+
+}
+#sticky {
+  position: fixed;
+  top: 0;
+  width:100%;
+}
+
+
+  </style>
+
+
+</head>
+<body style="background-color: rgb(152, 156, 158);">
+  
+
+<section>
+  
+    <nav id="sticky" style="background-color:rgba(0, 44, 95, 0.495)" class="navbar navbar-expand-lg sticky-top ; row" >
+        <div id="nav_div" class="container-fluid ; col" >
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarNav" >
+    
+            <ul class="navbar-nav ">
+              <li class="nav-item " >
+                <a style="font-size: 25px; color: rgb(255, 255, 255);" class="nav-link " aria-current="page" href="#">OUR SERVICES</a>
+              </li>
+              <li class="nav-item">
+                <a  style="font-size: 25px;color: rgb(255, 255, 255);" class="nav-link" href="#">OUR STORY</a>
+              </li>
+              <li class="nav-item">
+                <a  style="font-size: 25px; color: rgb(255, 255, 255);" class="nav-link" href="#">FAQS</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="nav_div" class="col">
+          <img src="images\vintage_car_2.png" alt="" style="width: auto; height: auto">
+        </div>
+        <div id="nav_div"  class="container-fluid justify-content-end ; col">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarNav" >
+    
+            <ul class="navbar-nav ">
+              <li class="nav-item " >
+                <a style="font-size: 25px; color: rgb(255, 255, 255);" class="nav-link " aria-current="page" href="#">OUR SERVICES</a>
+              </li>
+              <li class="nav-item">
+                <a  style="font-size: 25px;color: rgb(255, 255, 255);" class="nav-link" href="#">OUR STORY</a>
+              </li>
+              <li class="nav-item">
+                <a  style="font-size: 25px; color: rgb(255, 255, 255);" class="nav-link" href="#">FAQS</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+    </nav>
+    <video id="video" style="width: 100%;height: auto;"  src="y2mate.com - Hyundai  VENUE Indias First Connected SUV  Official TVC_1080p.mp4" autoplay  muted></video>
+      <div id = "vdiv">
+      
+      </div>
+</section>
+<section>
+    <div id="dd1">
+        <div id="ddd1">
+            <h3 style="color:darkblue; padding: 1%;">WE ARE INTRODUCE OUR NEW VENUE</h3>
+        </div>
+    </div>
+    <div id="dd2">
+        <div id="ddd2">
+            <h3 style="color:darkblue; padding: 3%;font-size: 10vw;">VENUE N-LINE</h3>  
+        </div>
+    </div>
+</section>
+<section id="">
+
+
+    <h2 style="text-align:center">Slideshow Gallery</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="images\venue-gallery-01.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="images\venue-gallery-02.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="images\venue-gallery-03.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="images\venue-gallery-04.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="images\venue-gallery-03.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="images\venue-gallery-01.jpg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div  class="row">
+    <div class="column">
+      <img class="demo cursor" src="images\venue-gallery-01.jpg" style="width:100%" onclick="currentSlide(1)" alt="VANUE">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images\venue-gallery-02.jpg" style="width:100%" onclick="currentSlide(2)" alt="VANUE">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images\venue-gallery-03.jpg" style="width:100%" onclick="currentSlide(3)" alt="VANUE">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images\venue-gallery-04.jpg" style="width:100%" onclick="currentSlide(4)" alt="VANUE">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images\venue-gallery-02.jpg" style="width:100%" onclick="currentSlide(5)" alt="VANUE">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="images\venue-gallery-01.jpg" style="width:100%" onclick="currentSlide(6)" alt="VANUE">
+    </div>
+  </div>
+</div>
+
+    
+<script>
+    let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+    
+    </script>
+</section>
+<section>
+  <div class="row" style="margin: 5%;background-color:rgb(0, 44, 95)" >
+    <div class="col" id="">
+      <div id="">
+         <img style="width: 1000px;" src="images\venue-gallery-02.jpg" alt="">
+      </div>
+    </div>
+     <div class="col" id="">
+      <div id="">
+          <h1 style="color:rgb(255, 255, 255); text-align: center;display: flex;justify-content: center;margin-top: 25%;">
+            Live the Lit Life
+
+          </h1>
+          <p style="color: rgba(254, 254, 254, 0.693);padding: 10%;justify-content: center;display: flex;">
+            What do you get when you combine advanced technology, incredible connectivity, and new-age style? The Lit SUV, Introducing the new Hyundai VENUE. The lit life is all about setting the trends, being connected to everything, and stealing the show wherever you go. The new Hyundai VENUE is the perfect addition to do all that and more.
+          </p>
+      </div>
+  </div>
+</div>
+</section>
+
+<section>
+  <div id="dd1">
+    <div style="background-color: rgb(0, 44, 95);text-align: center;">
+        <h3 style="color:rgb(254, 254, 254); padding: 1%;">OTHER MODELS</h3>
+    </div>
+  </div>
+  <div>
+    
+    <nav  class="navbar bg-light justify-content-center">
+      <ul  class="nav ">
+        <li class="nav-item">
+         <button onclick="ALL()" class="btn btn-light"><a class="nav-link display" href="">ALL</a></button> 
+        </li>
+        <li class="nav-item">
+          <button onclick="SUV()" class="btn btn-light"><a class="nav-link display" href="">SUV</a></button>
+        </li>
+        <li class="nav-item">
+          <button onclick="SEDAN()" class="btn btn-light"><a class="nav-link display" href="">SEDAN</a></button>
+        </li>
+         <li class="nav-item"> 
+          <button onclick="HATCHBACK()" class="btn btn-light" ><a class="nav-link display" href="">HATCHBACK</a></button>
+        </li>
+         <li class="nav-item">
+          <button onclick="ELECTRIC()" class="btn btn-light"><a class="nav-link display" href="">ELECTRIC</a></button>
+        </li>
+      </ul>
+    
+    </nav>
+  </div>
+  <section>
+    <div class="row">
+      <img id="img1" style="width: 445px;" class="col" src="images\1600x590_creta.png" alt="" >
+      <img id="img2" style="width: 445px;"  class="col" src="images\1600x590_aura.png" alt="" >
+      <img style="width: 445px;"  class="col" src="images\1600x590_i20.png" alt="" >
+    </div>
+
+   <div class="row">
+    <img style="width: 445px;" class="col" src="images\1600x590_nios.png" alt="" >
+    <img style="width: 445px;" class="col" src="images\Hyundai-i20Nline-Thumbanail-Model-PC-1600x590.png" alt="" >
+    <img style="width: 445px;" class="col" src="images\model-section-pc (1).png" alt="" >
+   </div>
+
+  </section>
+    
+  <script>
+    function ALL(){
+    
+    }
+  </script>
+    
+
+  
+</section>
+
+</body>
+</html>

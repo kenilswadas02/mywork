@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multiplication table</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script>
+        function M_table(){
+        
+        var number;
+        var result = "";
+
+        number = Number(document.getElementById("number").value);
+
+        for(var i = 1; i< 11; i++){
+          result = result + "<p>"+number + "*" + i + "=" + number * i+"</p>";
+        }
+
+        document.getElementById("result").innerHTML = result;
+      }
+    
+        
+    </script>
+
+</head>
+<body>
+    <!-- <div style="margin: 10%; padding: 2%;background-color: gray;" >
+        <form name="myform" action="" onsubmit="return M_table()">
+            <label for="" style="font-size: 25px;">enter the digits  that you want</label>
+            <input type="number" name="int" class="form-control" ><br>
+            <input type="button" value="submit" class="form-control" onclick="M_table()">
+           <div>
+            output:
+            <p id="d1"></p>
+           </div><div>
+            output:
+            <p id="d2"></p>
+           </div>
+            
+        </form>
+    </div> -->
+    <div style="margin: 6%;padding: 2%;text-align: center;">
+        Enter the number : <input id="number" />
+        <button onclick="M_table()">Print Multiplication table</button>
+        <div style="color: red; text-align: center; background-color: aquamarine; font-size: 25px;" id="result">
+    </div>
+   
+
+
+</body>
+</html>

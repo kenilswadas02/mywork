@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task5_low_and _high_</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   
+
+</head>
+<body>
+    <div style="margin: 10%; padding: 2%;background-color: gray;">
+        <form name="myform" action="" >
+            <label for="" style="font-size: 25px;">enter 1st digit</label>
+            <input name="input" type="text" class="form-control" >  <br> 
+            <input type="button" value="submit" class="form-control" onclick="fun()" >
+            <div >
+                <h1  style="text-align: center;">your input</h1>
+                <p id="d1"></p>  
+            </div>
+            <hr>
+            <div>
+                <h1 style="text-align: center;"> output:</h1>
+                <p id="d2"></p>
+                <p id="d3"></p>
+                <p id="d4"></p>
+                <p id="d5"></p>
+                <p id="d6"></p>
+            </div>
+        </form>
+       </div> 
+      <script>
+        function fun(){
+            var i=document.myform.input.value;
+            document.getElementById("d1").innerHTML=i;
+            var array=[];
+            str = i.split(" ");
+            for(let x of str){
+                array.push(x);
+            }
+            // split 
+            document.getElementById("d3").innerHTML=str;
+            // shorting
+            array.sort(function(a, b){return a - b});
+            // print shorted array
+            document.getElementById("d4").innerHTML=array;
+            // print index 0
+            document.getElementById("d5").innerHTML=array[0];
+           var n=array.length;
+            // print index n-1
+            document.getElementById("d6").innerHTML=array[n-1];
+            
+
+        }
+        
+
+
+
+      </script>
+</body>
+</html>

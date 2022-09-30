@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task9</title>
+</head>
+<body>
+    <p id="p1"></p>
+    <script>
+
+        function capToFront(s) {
+    var sp = s.split("");
+    var caps = []; 
+    var lower = [];
+    for (var i = 0; i < sp.length; i++)
+        {
+            if (sp[i] == sp[i].toUpperCase()){              
+                caps.push(sp[i]);
+
+            }
+            if (sp[i] == sp[i].toLowerCase()){
+                lower.push(sp[i]);
+            }
+        }
+    return caps.join("").concat(lower.join(""));
+
+    }
+    let a = prompt("enter the string");
+    let b = capToFront(a);
+    document.getElementById("p1").innerHTML =b;
+    </script>
+</body>
+</html>

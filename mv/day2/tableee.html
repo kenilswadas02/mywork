@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,tr,td{
+            color: red;
+            border:2px solid tomato;
+            border-collapse: collapse;
+            
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body style="background-color: rgb(218, 192, 192);">
+    <div style="margin: 5%; ">
+        <table id="myTable">
+        </table>
+        <button onclick="myFunction()">Try it</button>
+
+        <script>
+        function myFunction() {
+          var x = document.createElement("TR");
+          x.setAttribute("id", "myTr");
+          document.getElementById("myTable").appendChild(x);
+        
+          var y = document.createElement("TD");
+          var t = document.createTextNode("new cell");
+          y.appendChild(t);
+          document.getElementById("         ").appendChild(y);
+          var z = document.createElement("TD");
+          var t = document.createTextNode("cell");
+          z.appendChild(t);
+          document.getElementById("myTr").appendChild(z);
+        }
+        </script>
+        
+    </div>
+   
+</body>
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my index </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<style>
+  html{
+    scroll-behavior: smooth;
+  }
+  #effect{
+    transition:ease-in-out;
+    transform:rotate(180deg);
+    
+  }
+  
+        li:hover{
+        background-color:rgba(0, 0, 139, 0.164);
+        }
+        #div{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+        #h3{
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+        nav:hover{
+            background-color: rgba(0, 0, 139, 0.191);
+        }
+
+        
+
+        
+        /* Button used to open the chat form - fixed at the bottom of the page */
+
+
+        /* The popup chat - hidden by default */
+        .chat-popup {
+          display: none;
+          position: fixed;
+          top:  10px;
+          padding: 5%;
+          right: 15px;
+          border: 3px solid #f1f1f1;
+        }
+
+        /* Add styles to the form container */
+        .form-container {
+          max-width: 300px;
+          padding: 10px;
+          background-color: rgba(25, 31, 46, 0.108);
+        }
+
+        /* Full-width textarea */
+        .form-container textarea {
+          width: 100%;
+          padding: 15px;
+          margin: 5px 0 22px 0;
+          border: none;
+          background: #f1f1f1;
+          resize: none;
+          min-height: 200px;
+        }
+
+        /* When the textarea gets focus, do something */
+        .form-container textarea:focus {
+          background-color: #ddd;
+          outline: none;
+        }
+
+        /* Set a style for the submit/send button */
+        .form-container .btn {
+          background-color: #04AA6D;
+          color: white;
+          padding: 16px 20px;
+          border: none;
+          width: 100%;
+          margin-bottom:10px;
+        }
+
+        /* Add a red background color to the cancel button */
+        .form-container .cancel {
+          background-color: red;
+        }
+
+        /* Add some hover effects to buttons */
+        .form-container .btn:hover, .open-button:hover {
+          opacity: 1;
+        }
+
+        #verna{
+          display: none;
+        }
+        #creta{
+          display: none;
+        }
+        
+
+
+    
+</style>
+
+</head>
+<body   style="background-color:rgb(241, 235, 230)">
+  
+  
+
+            <nav style="background-color:rgb(187, 196, 241);" class="navbar navbar-expand-lg sticky-top ">
+
+                <div  style="width: 100%;">
+                    <div class="col">
+                        <nav class="navbar navbar-expand-lg justify-content-center  ">
+                            <div style="font-size: 25px;">
+                                <ul class="nav  ">
+                                    <img src="images\hyundai-motor-company-logo.svg" alt="" height="50px">
+                                    <li class="nav-item"><a style="color:darkblue;" class="nav-link" href=""></a></li>
+                                    <li class="nav-item"><a style="color:darkblue;" class="nav-link"  href="page1.html"><b>TEST DRIVE</b> </a></li>
+                                    <li class="nav-item"><a style="color:darkblue;" class="nav-link"  href="page1.html"> </a></li>
+                                    <li class="nav-item"><a style="color:darkblue;" class="nav-link" href="#galary"><b>NEW ARRIVAL</b></a></li>
+
+                                    <li class="nav-item"><a style="color:darkblue;" class="nav-link" href=""></a></li>
+                                    <li class="nav-item"><a style="color:darkblue;" class="nav-link" href="#"onclick="openForm()" >
+                                   <b> LIVE CHAT</b></a></li>
+                                    <li class="nav-item"><a style="color:darkblue;" class="nav-link" href=""></a></li>
+ 
+                                    <li class="nav-item dropdown">
+                                        <a style="color:darkblue  ;" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                                          learn more
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                          <li><a style="color:darkblue  ;" class="dropdown-item" href="#">contact us</a></li>
+                                          <li><a style="color:darkblue  ;" class="dropdown-item" href="#"></a></li>
+                                          <li><hr style="color:darkblue  ;"  class="dropdown-divider"></li>
+                                          <li><a style="color:darkblue  ;" class="dropdown-item" href="https://www.hyundai.com/in/en/find-a-car/venue/highlights" target="_blank">hyundai web site</a></li>
+                                        </ul>
+                                      </li>
+                                </ul>    
+                            </div>
+                        </nav>
+                    </div>  
+                   
+                </div>
+                    
+            </nav>
+
+            <div style="margin: 2%;">
+                <img style="width: 100%;" src="images\venue_home_orignal_pc.jpg" alt="">
+            </div>
+            <section id="effect">
+              <nav style="background-color:rgb(247, 248, 255) ;" class="navbar navbar-expand-lg justify-content-center  ">
+                <div style="font-size: 25px;">
+                    <ul class="nav  ">
+                        <li class="nav-item"><a style="color:darkblue;" class="nav-link"  href="#galary">VANUE</a></li>
+                        <li class="nav-item"><a style="color:darkblue;" class="nav-link" href="#galary">new arrival</a></li>
+                        <li class="nav-item"><a style="color:darkblue;" class="nav-link" href="#" onclick="openForm()">live chat</a></li>
+                        <li class="nav-item dropdown">
+                            <a style="color:darkblue  ;" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                              learn more
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li><a style="color:darkblue  ;" class="dropdown-item" href="#">contact us</a></li>
+                              <li><a style="color:darkblue  ;" class="dropdown-item" href="#"></a></li>
+                              <li><hr style="color:darkblue  ;"  class="dropdown-divider"></li>
+                              <li><a style="color:darkblue  ;" class="dropdown-item" href="https://www.hyundai.com/in/en/find-a-car/venue/highlights" target="_blank">hyundai web site</a></li>
+                            </ul>
+                          </li>
+                    </ul>    
+                </div>
+            </nav>
+            <!-- text div -->
+            <div style="margin: 10%;">
+                <h1 style="color:darkblue; padding: 1%;text-align: center;">WE ARE INTRODUCE OUR NEW VENUE</h1>
+                <img  src="images\Hyundai-venue-suv-highlight-top-pc_1600x580.jpg" alt="" style="width: 100%;">
+                <h3 id="h3" style="color:darkblue; padding: 1%;text-align: center;">Live the Lit Life</h3>
+                   <p id="h3" style="color:darkblue ; font-size: larger;"> What do you get when you combine advanced technology, incredible connectivity, and new-age style? The Lit SUV, Introducing the new Hyundai VENUE. The lit life is all about setting the trends, being connected to everything, and stealing the show wherever you go. The new Hyundai VENUE is the perfect addition to do all that and more.</p>
+
+            </div>
+            </section>
+            
+            <!-- image galary of cars -->
+
+           <section id="galary">
+            <div>
+              <h3 id="h3" style="color:darkblue; padding: 1%;text-align: center;">quick look of vanue plus</h3>
+              <div style="margin: 2%;" class="row">
+                  <div class="col">
+                      <img src="images\venue-gallery-01.jpg" alt="" style="width: 100%;" onclick="myFunction(this)"> 
+                  </div>
+                  <div class="col">
+                      <img src="images\venue-gallery-02.jpg" alt="" style="width: 100%;" onclick="myFunction(this)">
+                  </div>
+                  <div class="col">
+                      <img src="images\venue-gallery-03.jpg" alt="" style="width: 100%;" onclick="myFunction(this)">
+                  </div>
+                  <div class="col">
+                      <img src="images\venue-gallery-04.jpg" alt="" style="width: 100%;" onclick="myFunction(this)">
+                  </div>
+                  <p onclick="this.parentElement.style.display= 'none'"></p>
+                  <div style="padding: 10%; width: 100%;">
+                      <img id="expand_images" src="" alt="" style="width: 100%;">
+                  </div>
+              </div>
+
+              <script>
+              expand_images.parentElement.style.display = "block";
+
+                 function myFunction(imgs) {
+                  // Get the expanded image
+                  var expand_images = document.getElementById("expand_images");
+                  // Get the image text
+                  // var imgText = document.getElementById("imgtext");
+                  // Use the same src in the expanded image as the image being clicked on from the grid
+                  expand_images.src = imgs.src;
+                  // Use the value of the alt attribute of the clickable image as text inside the expanded image
+                  // imgText.innerHTML = imgs.alt;
+                  // Show the container element (hidden with CSS)
+                  expand_images.parentElement.style.display = "block";
+
+                  }
+              </script>
+
+          </div>
+           </section>
+
+            <section  >
+                <div style="margin: 10%;">
+                    <h1 style="color:darkblue; padding: 1%;text-align: center;">Hyundai Mobility Membership</h1>
+                    <img  src="images\Hyundai-HighlightsPage-MMP-Tab.jpg" alt="" style="width: 100%;">
+                    <h3 id="h3" style="color:darkblue; padding: 1%;text-align: center;">Live the Lit Life</h3>
+                       <p id="h3" style="color:darkblue ; font-size: larger;background-color: rgba(128, 155, 196, 0.536);">Purchase your favourite Hyundai car and enjoy the complimentary Hyundai Mobility Membership – a first of its kind program to offer you and your, family exclusive benefits for all your car, mobility and lifestyle related needs. Unlock a world of amazing offers and exciting deals across various categories from our strong partner ecosystem consisting of some of the best brands in the country.
+
+                        We look forward to a lifetime partnership with you, as we continue to delight with regular addition of partner brands and offers. Scan the QR code to download the Hyundai Mobility Membership App.
+                        Visit www.membership.hyundai.co.in to know more..</p>
+    
+                </div>
+            </section>
+            <section>
+              <div  style="text-align: center; background-color: rgba(240, 248, 255, 0.642);" class="chat-popup" id="myForm">
+                <form action="/action_page.php" class="form-container">
+                  <h1 style="color: darkblue;background-color: aliceblue;padding: 1%;" >Chat</h1>
+              
+                  <label style="color: white;" for="msg"><b>Message</b></label>
+                  <textarea id="t1" placeholder="Type message.." name="msg" required></textarea>
+              
+                  <button type="button" class="btn" onclick="tT1()">Send</button>
+                  <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                </form>
+              </div>
+            <script>
+                function openForm() {
+                  document.getElementById("myForm").style.display = "block";
+                }
+                
+                function closeForm() {
+                  document.getElementById("myForm").style.display = "none";
+                }
+                function tT1(){
+                    console.log(str);
+                  var str = document.getElementById("t1").value;
+                  console.log(str);
+                  var i1 = "hi";
+
+                  if(str==i1){
+
+                    alert("hello!!!!") ;
+                  }
+                }
+                </script>
+</section>
+
+<section>
+  <h1 style="color:darkblue; padding: 1%;text-align: center;border-radius: 20px; border: 2px solid gray; margin: 1%;">CLICK FOR MORE DETAILS</h1>
+  <div class="row" style="padding:1% ;">
+    <div style="border:2px solid gray; border-radius:20px ;"  onclick="display1()" class="col"><img src="images\1600x590_creta.png" alt="" style="width: 100%;height: auto;" ></div>
+    <div style="border:2px solid gray; border-radius:20px ;" onclick="display3()" class="col"><img src="images\1600x590_i20.png" alt="" style="width: 100%;height: auto;" ></div>
+    <div style="border:2px solid gray; border-radius:20px ;" onclick="display2()" class="col"><img src="images\1600x590_verna.png" alt="" style="width: 100%;height: auto;" ></div>
+  </div>
+  <script>
+    function display1(){
+      document.getElementById("creta").style.display="block";
+      document.getElementById("i20").style.display="none";
+      document.getElementById("verna").style.display="none";
+
+    } 
+    function display2(){
+      document.getElementById("creta").style.display="none";
+      document.getElementById("verna").style.display="block";
+      document.getElementById("i20").style.display="none";
+    }
+    function display3(){
+      document.getElementById("creta").style.display="none";
+      document.getElementById("verna").style.display="none";
+      document.getElementById("i20").style.display="block";
+    }
+  </script>
+</section>
+
+
+
+
+<section>
+  
+  <div id="creta" class="row" >
+    <div class="col" style="background-color: darkblue;">
+      <div class="row" style="color: white; text-align: center;padding: 2%;border: 2px solid gray ;border-radius: 20px;margin: 2%;">
+        <div class="col" style="border: 2px solid white;">
+            <p> Starting at</p>
+            <p>  ₹ 10 44 000 </p>
+            <p>  *Ex Showroom Delhi  </p>
+        </div>
+        <div class="col" style="border: 2px solid white;">
+            <p> Starting at</p>
+            <p>  ₹ 10 44 000 </p>
+            <p>  *Ex Showroom Delhi  </p>
+        </div>
+        <div class="row" style="border: 2px solid white; text-align: center;margin: 0%;">
+            <p> Starting at</p>
+            <p>  ₹ 10 44 000 </p>
+            <p>  *Ex Showroom Delhi  </p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <img src="images\1600x590_creta.png" alt="" width="100%" height="auto">
+    </div>
+  </div>
+  <div id="verna" class="row" style="margin: 2%;">
+    
+    
+    <div class="col" style="background-color:darkblue">
+      <div class="row" style="color: white; text-align: center;padding: 2%;">
+        <div class="col" style="border: 2px solid white;">
+            <p> Starting at</p>
+            <p>  ₹ 20 44 000 </p>
+            <p>  *Ex Showroom Delhi  </p>
+        </div>
+        <div class="col" style="border: 2px solid white;">
+            <p> Starting at</p>
+            <p>  ₹ 11 44 000 </p>
+            <p>  *Ex Showroom ahmedabad  </p>
+        </div>
+        <div class="row" style="border: 2px solid white; text-align: center;margin: 0%;">
+            <p> Starting at</p>
+            <p>  ₹ 10 44 000 </p>
+            <p>  *Ex Showroom Delhi  </p>
+        </div>
+        
+      </div>
+    </div>
+    <div class="col">
+      <img src="images\1600x590_verna.png" alt="" width="100%" height="auto">
+    </div>
+  </div>
+   <div id="i20" class="row" style="margin: 2%;">
+    
+   
+    <div class="col">
+      <div class="row" style="color: white; text-align: center;padding: 2%; background-color: darkblue;">
+        <div class="col" style="border: 2px solid white;">
+            <p> Starting at</p>
+            <p>  ₹ 10 44 000 </p>
+            <p>  *Ex Showroom Delhi  </p>
+        </div>
+        <div class="col" style="border: 2px solid white;">
+            <p> Starting at</p>
+            <p>  ₹ 10 00 000 </p>
+            <p>  *Ex Showroom Delhi  </p>
+        </div>
+        <div class="row" style="border: 2px solid white; text-align: center;margin: 0%;">
+            <p> Starting at</p>
+            <p>  ₹ 10 44 000 </p>
+            <p>  *Ex Showroom mumbai  </p>
+        </div>
+        
+      </div>
+    </div>
+    <div class="col">
+      <img src="images\1600x590_i20.png" alt="" width="100%" height="auto">
+    </div>
+  </div>
+</section>
+
+<script>
+  window.onload = function(){
+    const effect= document.querySelector("#effect");
+    window.addEventListener ('scroll',scrollEffect);
+    function scrollEffect(){
+      if (window.scrollY>=1000){
+        effect.style.opacity="1";
+        effect.style.transform = 'translateX(0px)';
+        effect.style.transition = '1 ease-in-out';
+      } else {
+      effect.style.opacity="0";
+      effect.style.transform= 'traslateX(-50px)';
+
+    }
+    }
+   
+  }
+</script>
+            
+       
+    
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>maximum number</title>
+    <script>
+
+        
+        var a=0;
+        var temp= 0;
+        var number =Number(5046);
+        reverse(number);
+            function reverse(number){
+                console.log("reverse called");
+                a=0;
+                for (j=1;j<2;j*1){
+                    a =a+a*parseInt(1000/j);
+                    console.log("hi");
+                    console.log(a);
+                }
+                a = number % 10;
+                b = parseInt(number / 10) ;      
+                number=b;  
+                // temp = temp + String(a); 
+                a += a*1000;
+                console.log(a);
+                console.log(number);
+                if(number >0 ){
+                    reverse(number);
+                }
+             }
+            // console.log(temp);
+            // temp = Number(temp);
+            // console.log(temp)
+
+            if(number<temp){
+                console.log("yes");
+            }
+            else{
+                console.log("no")
+            }
+            // console.log(number);
+            // console.log(a);
+            // console.log(string);
+
+        // function fun(){
+        //   var  number = Number(document.getElementById("number").value);
+         
+         
+        //   var i=number/10000;
+        //         document.getElementById("demo2").innerHTML=i;
+
+            // var a=parseInt(number/10);
+            // var b=Number(number%10);
+            // document.getElementById("d1").innerHTML=a;
+            // document.getElementById("d2").innerHTML=b;
+
+           
+            // document.getElementById("d1").innerHTML=number;
+           
+            // temp=a;
+            // a=b;
+            // b=temp;
+            // a=a*10;
+            // new_number=a+b;
+            // document.getElementById("d3").innerHTML=new_number;
+            // document.getElementById("d4").innerHTML="maximum digit is";
+
+        // if(number<new_number){
+        //     document.getElementById("d5").innerHTML=new_number;
+        //     document.getElementById("d6").innerHTML="trueeee";
+
+        // }
+        // else{
+        //     document.getElementById("d7").innerHTML=number;
+        //     document.getElementById("d8").innerHTML="false";
+        // }
+
+        // }
+      
+    </script>
+</head>
+<body>
+   <div style="text-align: center;padding: 2%;margin: 5%; background-color: bisque;">
+    <input id="number" type="number">
+    <button type="button"  onclick="reverse()">submit</button>
+    <p id="d1"></p><br>
+    <p id="demo2"></p><br>
+    <p id="d3"></p><br>
+    <p id="d4"></p>
+    <p id="d5"></p>
+    <p id="d6"></p>
+    <p id="d7"></p>
+    <p id="d8"></p>
+   </div>
+    
+</body>
+</html>

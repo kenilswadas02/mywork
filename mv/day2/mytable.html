@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mytable</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        #m1{ color:rgb(20, 20, 44);
+            font-size: 10vw;
+           
+          
+        }
+    </style>
+</head>
+<body>
+    <div style="background-color: rgb(213, 127, 127); height: 200px;">
+       <marquee id="m1" behavior=" " direction="left" scrollamount="25">fun _ table</marquee>
+    </div>
+    <div>
+        <form style="background-color: rgb(203, 222, 240); padding: 2%; margin-top: 2%;margin-left: 30%;margin-right: 30%; border-radius:20px ;" action="" id="myform">
+
+            <div>
+                <label for="input"><b>ENTER ROWS</b></label>
+                <input type="number" class="form-control" min="1" max="5"  required>
+            </div><br>
+
+            <div>
+                <label for="input"><b>ENTER COLUMN</b></label>
+                <input type="number" class="form-control"  required>
+            </div><br><br>
+            
+            <div>
+                <button onclick="myfun()" class="btn btn-primary ; form-control"   type="button">submit </button>
+            </div>  
+
+
+            <script>
+                function myfun(){
+                    var x=document.getElementById("myform").elements[0].value;
+                    document.getElementById("demo").innerHTML=x;
+                    var y=document.getElementById("myform").elements[1].value;
+                    document.getElementById("demo1").innerHTML=y;
+                }
+            </script> 
+
+            <br>
+
+            <div> 
+                output of rows:<p id="demo"></p>
+                outputs of column:<p id="demo1"></p>
+            </div>
+
+            <hr>
+
+            <div>
+                <h3 style="text-align: center;">final output</h3>
+            </div>
+
+        </form>
+    </div>
+   
+</body>
+</html>

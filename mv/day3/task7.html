@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task7</title>
+  </head>
+  <body>
+    <p id="p1"></p>
+    <p id="demo"></p>
+    <script>
+      function removrZero(a) {
+        let b = a.toString(); 
+        for (let i = 0; i < b.length; i++) {
+          if (b.charAt(i) != "0") {
+            
+          let res = b.substring(i);
+          return res;
+          }
+         
+        }
+      }
+      let a = prompt("enter the number");
+      let b = removrZero(a);
+      document.getElementById("p1").innerHTML = b;
+    </script>
+  </body>
+</html>
